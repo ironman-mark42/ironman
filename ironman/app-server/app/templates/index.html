@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <title>Ironman Suits - The series of robotic suits that changed lives!</title>
+  </head>
+
+  <body>
+    <h1>Ironman Suits</h1>
+    {% for suit in suits %}
+      <p>Model: {{ suit.model }}</p>
+      <p>Description: {{ suit.description }}</p>
+      <p>Status: {{ suit.status }}</p>
+      <img src="{{url_for('static', filename=suit.image_file)}}"></img>
+      <img src="{{url_for('static', filename=suit.video_file)}}"></img>
+    {% endfor %}
+  </body>
+</html>
